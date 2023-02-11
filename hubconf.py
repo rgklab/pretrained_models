@@ -1,5 +1,6 @@
-dependencies = ['torch', 'os']
+dependencies = ['torch']
 import torch
+import os
 from os.path import join
 
 dirname = os.path.dirname(__file__)
