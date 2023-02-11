@@ -1,10 +1,21 @@
 # Pretrained Models
 A repository of pretrained multiples required for reproducing experiments 
 
-## Torch Instructions
-  1. Save pretrained models using directly using `torch.save(model, path)`. 
-  2. Push `path` to this guthub repository
-  3. Load and run models using `torch.utils.model_zoo.load_url(url_for_raw_file)` 
+## Torch Hub Instructions
+  1. Save pretrained models directly using `torch.save(<your torch model>, <save path>)`. 
+  2. Push `<save path>` to this github repository
+  4. Add a function `<model name>` to `hubconf.py` that loads and returns your model (see the file for a simple example)
+  3. Load and run models using `torch.hub.load('rgklab/pretrained_models', '<model name>', **kwargs)` 
+
+```python
+import torch
+model, tf = torch.hub.load('rgklab/pretrained_models', 'resnet18_cifar10', return_transform=True)
+```
+
+## Torch Model Zoo Instructions
+  1. Save pretrained models directly using `torch.save(<your torch model>, <save path>)`. 
+  2. Push `<save path>` to this github repository
+  3. Load and run models using `torch.utils.model_zoo.load_url(<url_for_raw_file>)` 
 
 See example below:
 
