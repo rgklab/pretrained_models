@@ -25,6 +25,6 @@ data = CIFAR10('/voyager/datasets', transform=tf)
 
 model.eval()
 logits = model(data[0][0].unsqueeze(0).cuda())[0]
-print(f'Prediction: {data.classes[logits.argmax()]}, Probability: {100*logits.softmax(0).max():.2f}, True: {data.classes[data[0][1]]}')
-## Prediction: frog, Probability: 97.58, True: frog
+print(f'Prediction: {data.classes[logits.argmax()]}, Probability: {100*logits.softmax(0).max():.2f}%, True: {data.classes[data[0][1]]}')
+## Prediction: frog, Probability: 97.58%, True: frog
 ```
