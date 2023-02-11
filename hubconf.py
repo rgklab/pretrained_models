@@ -1,3 +1,4 @@
+dependencies = ['torch', 'os']
 import torch
 from os.path import join
 
