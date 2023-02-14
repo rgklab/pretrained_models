@@ -54,5 +54,5 @@ def uci_heart():
     https://www.kaggle.com/datasets/redwankarimsony/heart-disease-data
     """
     data = pickle.load(open(join(dirname, 'uci_heart_features.pkl'), 'wb'))
-    model = pickle.load(open(join(dirname, 'uci_heart_features.pkl'), 'wb'))
+    model = pickle.load(open(join(dirname, 'uci_xgb_cleveland.pkl'), 'wb'))
     return model, data
