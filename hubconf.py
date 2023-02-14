@@ -1,6 +1,7 @@
-dependencies = ['torch']
+dependencies = ['torch, pandas']
 import torch
 import pickle
+import pandas as pd
 import os
 from os.path import join
 
@@ -56,3 +57,9 @@ def uci_heart():
     data = pickle.load(open(join(dirname, 'detectron/uci_heart_features.pkl'), 'rb'))
     model = pickle.load(open(join(dirname, 'detectron/uci_xgb_cleveland.pkl'), 'rb'))
     return model, data
+
+def uci_heart_raw():
+    """
+    Loads raw data from https://www.kaggle.com/datasets/redwankarimsony/heart-disease-data
+    """
+    return pd.read_csv(join(dirname, 'detectron/heart_disease_uci.csv'))
