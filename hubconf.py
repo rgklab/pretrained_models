@@ -1,4 +1,4 @@
-dependencies = ['torch, pandas']
+dependencies = ['torch', 'pandas']
 import torch
 import pickle
 import pandas as pd
