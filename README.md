@@ -1,5 +1,5 @@
 # Pretrained Models
-A repository of pretrained multiples required for reproducing experiments 
+A repository of pretrained models required for reproducing experiments 
 
 ## Torch Hub Instructions
   1. Save pretrained models directly using `torch.save(<your torch model>, <save path>)`. 
